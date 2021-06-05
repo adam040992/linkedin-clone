@@ -11,6 +11,7 @@
 body {
     overflow-y: scroll;
     overflow-x: hidden;
+    font-family: Ariel, sans-serif;
 }
 
 :root, body, html {
