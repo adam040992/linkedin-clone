@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 
 function Home() {
     return (
-        <div>
+        <Container>
             Home
-        </div>
+        </Container>
     )
 }
 
 export default Home
+
+const Container = styled.div``;
