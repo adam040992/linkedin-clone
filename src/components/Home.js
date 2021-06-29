@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import Leftside from './Leftside';
+import Rightside from './Rightside';
+import Main from '../components/Main';
 
 function Home() {
     return (
@@ -12,6 +15,12 @@ function Home() {
                     Find talented pros in record time with Upwork and keep business moving.
                 </p>
             </Section>
+
+            <Layout>
+                <Leftside />
+                <Main />
+                <Rightside />
+            </Layout>
         </Container>
     )
 }
@@ -54,6 +63,22 @@ const Section = styled.section`
     }
 
     @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 0 5px;
+    }
+`;
+
+const Layout = styled.div`
+    display: grid;
+    grid-template-areas: "leftside main rightside";
+    grid-template-columns: minmax(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr);
+    column-gap: 25px;
+    row-gap: 25px;
+    /* grid-template-rows: auto; */
+    margin: 25px 0;
+
+    @media (max-width: 768px) {
+        display: flex;
         flex-direction: column;
         padding: 0 5px;
     }
